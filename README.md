@@ -3,7 +3,7 @@
 ---
 
 ##### Integrantes:
-1. *[Poner aquí Nombre y Apellidos del integrante 1]* - *[Poner aquí su Matrícula]* - *[Poner aquí su campus]*
+1. *Sergio Hernandez Castillo* - *A01025210* - *CSF*
 
 ---
 ## 1. Aspectos generales
