@@ -4,7 +4,6 @@
 
 ##### Integrantes:
 1. *Sergio Hernandez Castillo* - *A01025210* - *CSF*
-
 ---
 ## 1. Aspectos generales
 
@@ -59,6 +58,24 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 *7) El costo total de la solución obtenida es calculada.*
 
 *8) La solución se imprime para el usuario (que trabajador fue asignado a que tarea y cuanto es el costo total)*
+
+*Problema 2:*
+
+*Sea W un conjunto de enteros no negativos y M un número entero positivo. El problema consiste en diseñar un algoritmo para encontrar todos los posibles subconjuntos de W cuya suma sea exactamente M.*
+
+*Este problema requiere resolverse utilizando la técnica de diseño de algoritmos conocida como Backtracking/Vuelta atras. Lo que se hizo para resolverlo de esa manera fue lo siguiente:*
+
+*1) Se le preguntó al usuario el tamaño del conjunto de enteros no negativos, asegurando que el tamaño no sea menor o igual a 0.*
+
+*2) Se creó un arreglo del tamaño del conjunto.*
+
+*3) Se creó un vector vació que guardará todos los subconjuntos que sumarán al entero objetivo, si es que existen.*
+
+*4) Se le preguntó al usuario cuales enteros deseaba analizar/agregar al conjunto y se agregan al arreglo, asegurándo que los números dados no se repitan y que no sean menor o igual a 0.*
+
+*5) Se le preguntó al usuario el entero objetivo, asegurándo que no sea menor o igual a 0.*
+
+*6) El algoritmo empieza a buscar subconjuntos, cuyas sumas sean igual al entero positivo, dentro del conjunto. Hace esto utilizando recursión, junto con un grupo extra de variables para ayudar. Se toma en cuenta la posición del arreglo como la raíz de la solución y una suma que será analizada cada vez que el algoritmo se llama a sí mismo. Ambas variables empiezan en 0. Primero, se analiza si la suma es igual al entero objetivo, si no lo es, un ciclo "for" itera sobre el arreglo/conjunto, partiendo desde la posición dada. Segundo, dentro del ciclo, si lo que vale suma más el elemento siendo analizado es menor o igual al entero objetivo, la suma se guarda como sí misma más el elemento siendo analizado, se guarda el elemento en el vector de soluciones, y el algoritmo se llama a sí mismo, pero ahora con el nuevo valor de la suma y la posición incrementada por uno. El mismo proceso va a seguir corriendo una y otra vez hasta que la suma sea igual al entero objetivo. Si ese es el caso, el vector de soluciones se imprime para el usuario. Ahora, después de que una llamada recursiva acabe de correr, la suma y el vector de soluciones regresan al estado/valor que tenían antes de hacer la llamada recursiva, para asegurar que otros subconjuntos sean encontrados y impresos para el usuario.*
 
 ### 2.1 Pasos a seguir para utilizar la aplicación
 
