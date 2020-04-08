@@ -2,5 +2,5 @@ compiler: gcc
 language: cpp
 script:
     - cd sources
-    - g++ JobAssignment.cpp -o JobAssignment 
-    - g++ SubsetSum.cpp -o SubsetSum
+    - g++ JobAssignment.cpp -o JobAssignment -std=c++17
+    - g++ SubsetSum.cpp -o SubsetSum -std=c++17
