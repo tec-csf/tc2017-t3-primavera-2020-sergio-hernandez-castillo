@@ -238,7 +238,7 @@ int main(){
             cout << "\nEnter a number greater than 0: ";
         }//Close if
 
-        // If the size is now greater than 0, stops the loop
+        // If the size is now greater than 0, the loop stops
         else { 
             keepAsking = false;
         }//Close else 
@@ -265,7 +265,7 @@ int main(){
             cout << "\nEnter a number greater than 0: ";
         }//Close if
 
-        // If the target is now greater than 0, stops the loop
+        // If the target is now greater than 0, the loop stops
         else { 
             keepAsking = false;
         }//Close else 
