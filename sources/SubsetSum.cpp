@@ -140,7 +140,8 @@ void printSet(int set[], int size){
 /**
  * Prints the solution subset.
  * 
- * @param[in] &sol the address in memory of the solution subset
+ * @param[in] &sol the address in memory of the vector that 
+ *      represents the solution subset
 */
 void printSol(vector<int> &sol){
     // Iterate over the whole subset
