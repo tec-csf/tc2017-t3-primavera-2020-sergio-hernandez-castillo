@@ -11,7 +11,7 @@
 using namespace std;
 
 /**
- * Fills the 2D costs vector with random numbers between 1 and max.
+ * Fills the 2D costs vector with random numbers between 1 and max minus 1.
  * 
  * @param[in] &costs the address in memory of the 2D vector that 
  *      represents the costs of each job per worker
@@ -45,7 +45,7 @@ void fillCosts(vector<vector<int>> &costs, int jobs, int max){
  * @param[in] &assignations the address in memory of the 2D vector that 
  *      represents the job assignations
  * @param[in] jobs the number of jobs
- * @param[in] row the row that in the 2D vector that represents the 
+ * @param[in] row the row in the 2D vector that represents the 
  *      worker being analyzed
  * 
  * @returns "true" if the worker is free to be assigned to a job, or 
@@ -149,9 +149,9 @@ int assignJobs(vector<vector<int>> &costs, vector<vector<int>> &assignations, in
             */
             isItFree = checkIfFree(assignations, jobs, row);
 
-            // If the current worker has the lowest cost and is free for a job
+            // If the current worker has the lowest cost and is free for the job
             if ((costs[row][col] < min) && (isItFree == true)){
-                // Saves the new mimimum cost 
+                // Saves the new minimum cost 
                 min = costs[row][col];
                 // The row and column of the worker is saved 
                 spotX = row;
