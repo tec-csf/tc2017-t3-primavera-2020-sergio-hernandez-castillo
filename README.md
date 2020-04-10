@@ -46,17 +46,17 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 
 *2) Se le preguntó al usuario cual es el máximo costo que existe para una tarea.*
 
-*3) Se creó un vector de 2 dimensiones que representará los costos de las tareas por trabajador. Este vector ocupa la cantidad de tareas como el tamaño, es decir, si el numero de tareas es "n", el tamaño del vector será "[n][n]"*
+*3) Se creó un vector de 2 dimensiones que representará los costos de las tareas por trabajador. Este vector ocupa la cantidad de tareas como el tamaño, es decir, si el numero de tareas es "n", el tamaño del vector será "[n][n]".*
 
 *4) Se creó un vector de 2 dimensiones que representará la asignación de tareas. El tamaño de este vector es igual que el anterior y una asignación se representa como un 1, mientras que un 0 significa que la tarea no fue asignada.*
 
-*5) Se llenó el vector de costos con números aleatorios entre 1 y el máximo costo.*
+*5) Se llenó el vector de costos con números aleatorios entre 1 y el máximo costo menos 1.*
 
 *6) La asignación de tareas empieza. Utilizando dos ciclos "for", uno dentro de otro, se iteró sobre el vector de costos, columna por columna, y dentro de cada columna, fila por fila. En otras palabras, se analizaron los costos que cada trabajador tiene por tarea. Primero, se revisa si un trabajador está libre antes de analizar si su costo es óptimo. Si ese es el caso y su costo es el más óptimo de los "n" trabajadores (el más chico), su posición en el vector de costos se guarda. Si el trabajador no estaba libre, se analiza el siguiente trabajador. Si hubo otro trabajador con un mejor costo, se descarta el anterior y la posición del actual se guarda, si no, entonces el anterior se mantiene guardado. Al haber acabado iterando sobre los "n" trabajadores, se asigna la tarea al trabajador con el costo óptimo (se guarda un 1 en su posición en el vector de asignaciones) y se analiza la siguiente tarea/columna, hasta acabar con todas.*
 
 *7) El costo total de la solución obtenida es calculada.*
 
-*8) La solución se imprime para el usuario (que trabajador fue asignado a que tarea y cuanto es el costo total)*
+*8) La solución se imprime para el usuario (que trabajador fue asignado a que tarea y cuanto es el costo total).*
 
 *Complejidad de la solución: O(n^3)*
 
