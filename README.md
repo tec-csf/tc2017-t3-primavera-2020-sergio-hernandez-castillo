@@ -11,7 +11,6 @@ Las orientaciones de la tarea se encuentran disponibles en la plataforma **Canva
 
 Este documento es una guía sobre qué información debe entregar como parte de la tarea, qué requerimientos técnicos debe cumplir y la estructura que debe seguir para organizar su entrega.
 
-
 ### 1.1 Requerimientos técnicos
 
 A continuación se mencionan los requerimientos técnicos mínimos de la tarea, favor de tenerlos presente para que cumpla con todos.
@@ -59,6 +58,8 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 
 *8) La solución se imprime para el usuario (que trabajador fue asignado a que tarea y cuanto es el costo total)*
 
+*Complejidad de la solución: O(n^3)*
+
 *Problema 2:*
 
 *Sea W un conjunto de enteros no negativos y M un número entero positivo. El problema consiste en diseñar un algoritmo para encontrar todos los posibles subconjuntos de W cuya suma sea exactamente M.*
@@ -77,10 +78,30 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 
 *6) El algoritmo empieza a buscar subconjuntos, cuyas sumas sean igual al entero positivo, dentro del conjunto. Hace esto utilizando recursión, junto con un grupo extra de variables para ayudar. Se toma en cuenta la posición del arreglo como la raíz de la solución y una "suma" que será analizada cada vez que el algoritmo se llama a sí mismo. Ambas variables empiezan en 0. Primero, se analiza si "suma" es igual al entero objetivo, si no lo es, un ciclo "for" itera sobre el arreglo/conjunto, partiendo desde la posición dada. Segundo, dentro del ciclo, si lo que vale "suma" más el elemento analizado es menor o igual al entero objetivo, "suma" se guarda como sí misma más el elemento analizado, se guarda el elemento en el vector de soluciones, y el algoritmo se llama a sí mismo, pero ahora con el nuevo valor de "suma" y la posición incrementada por uno. El mismo proceso va a seguir corriendo una y otra vez hasta que "suma" sea igual al entero objetivo o que todos los elementos del arreglo hayan sido analizados, ya sea como nodos hoja o nodos raíz dentro del árbol de soluciones que este problema representa por utilizar Backtracking. Si en una llamada recursiva "suma" es igual al entero objetivo, el vector de soluciones se imprime para el usuario. Ahora, después de que una llamada recursiva acabe de correr, "suma" y el vector de soluciones regresan al estado/valor que tenían antes de hacer la llamada, para asegurar que otros subconjuntos sean encontrados y impresos para el usuario, si es que existen. Si el conjunto no tiene ninguna solución, el algoritmo no imprimirá nada.*
 
+*Complejidad de la solución: O(2^n)*
+
 ### 2.1 Pasos a seguir para utilizar la aplicación
 
-*[Incluya aquí una guía paso a paso para poder utilizar la aplicación, desde la clonación del repositorio, la compilación del código hasta la ejecución de los ejemplos para visualizar los resultados.]*
+*1) Abrir la terminal.*
+
+*2) Acceder al directorio donde se va a clonar el repositorio. Ej: cd desktop.*
+
+*3) Usar el comando "git clone" seguido del link del repositorio, que es el siguiente: https://github.com/tec-csf/tc2017-t3-primavera-2020-sergio-hernandez-castillo.git. Quedaria de la siguente manera: "git clone https://github.com/tec-csf/tc2017-t3-primavera-2020-sergio-hernandez-castillo.git".*
+
+*4) Acceder al clon/carpeta del repositorio desde la terminal, el cuál se guardó donde se hizo el "git clone". Ej: "cd tc2017-t3-primavera-2020-sergio-hernandez-castillo".*
+
+*5) Una vez que esté dentro de la carpeta del repositorio tendrá que acceder a la carpeta de sources con el siguente comando: "cd sources".*
+
+*6) Para poder utilizar el primer programa primero deberá compilar con el siguiente comando: "g++ JobAssignment.cpp -o JobAssignment".*
+
+*7) El siguiente paso, para poder correrlo, es ingresar el siguiente comando: "./JobAssignment".*
+
+*8) Para poder utilizar el segundo programa primero deberá compilar con el siguiente comando: "g++ SubsetSum.cpp -o SubsetSum".*
+
+*9) El siguiente paso, para poder correrlo, es ingresar el siguiente comando: "./SubsetSum".*
 
 ## 3. Referencias
 
-*[Incluya aquí las referencias a sitios de interés y cualquier otra información que haya utilizado para realizar la actividad y que le puedan ser de utilidad a otras personas que quieran usarlo como referencia]*
+*https://iq.opengenus.org/subset-sum-problem-backtracking/*
+
+*http://www.lcc.uma.es/~av/Libro/CAP4.pdf*
